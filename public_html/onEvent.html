@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<script>
+    
+$(document).ready(function(){
+  $("p").on({
+    mouseenter: function(){
+      $(this).css("background-color", "lightgray");
+    },  
+    mouseleave: function(){
+      $(this).css("background-color", "lightblue");
+    }, 
+    click: function(){
+      $(this).css("background-color", "yellow");
+      $("h1").after("<h2>Element added after</h2>")
+    }  
+  });
+
+$("h1").on({
+    click: function(){
+        $(this).css("background-color", "yellow");
+    }
+});
+
+});
+
+
+</script>
+</head>
+<body>
+
+<div>
+<p>Click or move the mouse pointer over this paragraph to see the results.</p>
+</div>
+    
+<div>
+    <h1>Welcome</h1>
+</div>
+</body>
+</html>
